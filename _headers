@@ -1,17 +1,3 @@
-// =================================================================================
-// 5. ファイル名: _headers (プロジェクトのルートに配置)
-//    役割: セキュリティ関連のHTTPヘッダーを設定します。
-// =================================================================================
-/*
-  Content-Security-Policy:
-  - default-src 'self': 自分自身のドメインからのリソースのみを許可します。
-  - script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com: スクリプトは自身のドメイン、インライン、TailwindのCDNから許可します。
-  - style-src 'self' 'unsafe-inline' https://fonts.googleapis.com: スタイルは自身のドメイン、インライン、Google Fontsから許可します。
-  - font-src 'self' https://fonts.gstatic.com: フォントは自身のドメインとGoogle Fontsのドメインから許可します。
-  - connect-src 'self': API通信(fetch)は自身のドメインに対してのみ許可します。
-    (/.netlify/functions/へのアクセスは同一ドメインと見なされるため、'self'で問題ありません)
-*/
-/*
   /
     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self';
     X-Frame-Options: DENY
